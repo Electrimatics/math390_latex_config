@@ -1,0 +1,69 @@
+%Author: Henry Budris
+%Updated: 04/15/2020
+
+\documentclass[12]{article}
+\usepackage[left=0.75in, right=0.75in, top=0.75in, bottom=0.75in]{geometry}
+\usepackage{amsmath,amsthm,amscd,amssymb,mathrsfs}
+\usepackage{enumitem, xstring}
+
+%This document contains many of the custom commands I use to write my assignments. 
+%They make typing sometimes tedious characters to type repeatedly (ie. a {) easier as well 
+%as automatically setting up environments.  The custom commands are divided into named 
+%sections.  Each section has directions on how to use the commands, what mode you must use the
+%command in (ie. commands requiring math mode are surrounded in $), and what parameters the
+%command takes.
+
+%NOTE: When compiling your document, compile on your main.tex page, not this one!  Compiling on this page will cause errors.
+
+%Commands for document headers
+%Use: \command{assignment number}{due date}{author(s)}
+\newcommand{\hwhead}[3]{
+\begin{center} 
+    \textbf{MATH 390, Homework #1} \n 
+    \textit{Due date: #2} \n 
+    Author: #3 \n 
+\end{center}}
+
+\newcommand{\labhead}[4]{
+\begin{center}
+    \textbf{MATH 390, Lab #1} \n 
+    \textit{Due date: #2} \n 
+    Authors: #3 \n 
+    Team: #4 \n 
+\end{center}}
+%--------------------------------------------------------------
+
+%Commands for formatting and inserting special characters
+%Use: \command or $\command$
+\newcommand{\n}{\\*}
+\newcommand{\tb}{\null\quad}
+\newcommand{\ob}{\{}
+\newcommand{\cb}{\}}
+
+%Contributor: Nick Andersen
+\newcommand{\s}{\vskip2mm\vspace{2mm}}
+\newcommand{\sd}{\vskip0mm\vspace{2mm}}
+\newcommand{\sg}{\vskip0mm\vspace{3mm}}
+\newcommand{\size}[2]{{\fontsize{#1}{0}\selectfont#2}}
+
+%Commands for set notation
+%Use: $\command{definition*}{rule*}$
+\newcommand{\set}[1]{\ob #1 \cb}       %*
+\newcommand{\tmod}{\text{mod}~}
+\newcommand{\tand}{~\text{and}~}
+\newcommand{\setz}{\mathbb{Z}}
+\newcommand{\setn}{\mathbb{N}}
+\newcommand{\setq}{\mathbb{Z}}
+\newcommand{\setr}{\mathbb{R}}
+
+%Commands for setting up a proof
+%Use: <\comamnd{proof body}>
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newcommand{\pf}[1]{
+\begin{proof} #1
+\end{proof}
+}
+
+%Commands for ordered pair
+\newcommand{\op}[2]{(#1, #2)}
